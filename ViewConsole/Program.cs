@@ -10,6 +10,17 @@ namespace ViewConsole
 {
     internal class Program
     {
+        static void PrintSpec(int len, int maxLen)
+        {
+            string before = new string(' ', len);
+            string after = new string(' ', maxLen - len);
+            Console.BackgroundColor = ConsoleColor.Green;
+            Console.Write(before);
+            Console.BackgroundColor = ConsoleColor.Red;
+            Console.Write(after);
+            Console.ResetColor();
+            Console.WriteLine();
+        }
         static void PrintHelp() {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(
@@ -107,8 +118,12 @@ namespace ViewConsole
                                 Console.WriteLine("Здесь пусто :(");
                             } else
                             {
+                                int maxLen = gistogram.Values.Sum();
+                                int maxStrLen = gistogram.Keys.Select(x => x.Length).Max();
                                 foreach (var speciality in gistogram) {
-                                    Console.WriteLine($"На направлении {speciality.Key} учится {speciality.Value} студентов;");
+                                    int strLen = speciality.Key.Length;
+                                    Console.Write($"[{speciality.Key}]: " + new string(' ', maxStrLen - strLen));
+                                    PrintSpec(speciality.Value, maxLen);
                                 }
                             }
                             break;
