@@ -41,9 +41,10 @@
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(12, 813);
+            this.buttonAdd.Location = new System.Drawing.Point(6, 423);
+            this.buttonAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(384, 128);
+            this.buttonAdd.Size = new System.Drawing.Size(192, 67);
             this.buttonAdd.TabIndex = 0;
             this.buttonAdd.Text = "Добавить студента";
             this.buttonAdd.UseVisualStyleBackColor = true;
@@ -51,9 +52,10 @@
             // 
             // buttonRemove
             // 
-            this.buttonRemove.Location = new System.Drawing.Point(602, 813);
+            this.buttonRemove.Location = new System.Drawing.Point(301, 423);
+            this.buttonRemove.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonRemove.Name = "buttonRemove";
-            this.buttonRemove.Size = new System.Drawing.Size(384, 128);
+            this.buttonRemove.Size = new System.Drawing.Size(192, 67);
             this.buttonRemove.TabIndex = 2;
             this.buttonRemove.Text = "Удалить студента";
             this.buttonRemove.UseVisualStyleBackColor = true;
@@ -62,11 +64,13 @@
             // dataGridViewStudents
             // 
             this.dataGridViewStudents.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewStudents.Location = new System.Drawing.Point(12, 12);
+            this.dataGridViewStudents.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridViewStudents.Location = new System.Drawing.Point(6, 6);
+            this.dataGridViewStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewStudents.Name = "dataGridViewStudents";
             this.dataGridViewStudents.RowHeadersWidth = 82;
             this.dataGridViewStudents.RowTemplate.Height = 33;
-            this.dataGridViewStudents.Size = new System.Drawing.Size(974, 417);
+            this.dataGridViewStudents.Size = new System.Drawing.Size(487, 217);
             this.dataGridViewStudents.TabIndex = 3;
             // 
             // chartStudents
@@ -75,26 +79,28 @@
             this.chartStudents.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.chartStudents.Legends.Add(legend1);
-            this.chartStudents.Location = new System.Drawing.Point(12, 435);
+            this.chartStudents.Location = new System.Drawing.Point(6, 226);
+            this.chartStudents.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.chartStudents.Name = "chartStudents";
             series1.ChartArea = "ChartArea1";
             series1.Legend = "Legend1";
             series1.Name = "Специальности";
             this.chartStudents.Series.Add(series1);
-            this.chartStudents.Size = new System.Drawing.Size(974, 372);
+            this.chartStudents.Size = new System.Drawing.Size(487, 193);
             this.chartStudents.TabIndex = 4;
             this.chartStudents.Text = "chart1";
             // 
             // FormMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(998, 953);
+            this.ClientSize = new System.Drawing.Size(499, 496);
             this.Controls.Add(this.chartStudents);
             this.Controls.Add(this.dataGridViewStudents);
             this.Controls.Add(this.buttonRemove);
             this.Controls.Add(this.buttonAdd);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "FormMain";
             this.Text = "DekanatPro";

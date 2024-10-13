@@ -97,7 +97,7 @@ namespace ViewConsole
                     case ConsoleKey.D3:
                         {
                             Console.WriteLine("Список студентов:");
-                            List<(string, string, string)> students = logic.GetStudents();
+                            List<(int, string, string, string)> students = logic.GetStudents();
                             if (students.Count() < 1)
                             {
                                 Console.WriteLine("Здесь пусто :(");
@@ -105,7 +105,7 @@ namespace ViewConsole
                             }
                             for(int i = 0; i < students.Count(); i++)
                             {
-                                Console.WriteLine($"{i+1}) {students[i]}");
+                                Console.WriteLine(students[i]);
                             }
                             break;
                         }
