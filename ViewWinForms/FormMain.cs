@@ -33,15 +33,15 @@ namespace ViewWinForms
         public void reload_grid()
         {
             dataGridViewStudents.Rows.Clear();
-            List<(string, string, string)> students = logic.GetStudents();
+            List<(int, string, string, string)> students = logic.GetStudents();
             for (int i = 0; i < students.Count(); i++)
             {
                 DataGridViewRow row = new DataGridViewRow();
                 row.CreateCells(dataGridViewStudents);
-                row.Cells[0].Value = i + 1;
-                row.Cells[1].Value = students[i].Item1;
-                row.Cells[2].Value = students[i].Item2;
-                row.Cells[3].Value = students[i].Item3;
+                row.Cells[0].Value = students[i].Item1;
+                row.Cells[1].Value = students[i].Item2;
+                row.Cells[2].Value = students[i].Item3;
+                row.Cells[3].Value = students[i].Item4;
                 dataGridViewStudents.Rows.Add(row);
             }
         }
@@ -88,7 +88,7 @@ namespace ViewWinForms
             List<int> indexes = new List<int>();
             for (int i = 0; i < rows.Count; i++)
             {
-                indexes.Add(Convert.ToInt32(rows[i].Cells[0].Value) - 1);
+                indexes.Add(Convert.ToInt32(rows[i].Cells[0].Value));
             }
             if (indexes.Count < 1)
             {
