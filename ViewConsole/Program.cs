@@ -84,7 +84,7 @@ namespace ViewConsole
                                 Console.WriteLine("Введите число!");
                                 break;
                             }
-                            bool deleted = logic.DeleteStudent(index - 1);
+                            bool deleted = logic.DeleteStudent(index);
                             if (deleted)
                             {
                                 Console.WriteLine("Студент успешно удален!");
