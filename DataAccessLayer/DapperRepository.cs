@@ -17,7 +17,8 @@ namespace DataAccessLayer
     {
         private string connectionString;
         public DapperRepository() {
-            this.connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\codyg\\source\\repos\\Лаба_С_Ефимом_2\\DataAccessLayer\\Database1.mdf;Integrated Security=True";
+            this.connectionString = "Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:" +
+            "\\Users\\codyg\\source\\repos\\Лаба с Ефимом 3\\DataAccessLayer\\Database1.mdf;Integrated Security=True";
         }
         
         public void Create(Student obj)

@@ -11,9 +11,8 @@ namespace DataAccessLayer
     public class DataContext: DbContext
     {
         public DbSet<Student> Students { get; set; }
-        public DataContext() : base("Data Source=(LocalDB)\\" +
-            "MSSQLLocalDB;AttachDbFilename=C:\\Users\\codyg\\source\\repos\\Лаба_С_Ефимом_2\\" +
-            "DataAccessLayer\\Database1.mdf;Integrated Security=True")
+        public DataContext() : base("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:" +
+            "\\Users\\codyg\\source\\repos\\Лаба с Ефимом 3\\DataAccessLayer\\Database1.mdf;Integrated Security=True")
         { }
     }
 

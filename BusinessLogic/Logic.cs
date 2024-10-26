@@ -11,13 +11,15 @@ namespace BusinessLogic
     public class Logic
     {
         private IRepository<Student> studentRepository;
-        public Logic() {
-            // энтити фрейм форк
-            // \/ \/ \/
-            studentRepository = new EntityFrameworkRepository(new DataContext());
-            // даппер. разкомментировать по необходимости🍌
-            // \/ \/ \/
-            // studentRepository = new DapperRepository();
+
+        public Logic(IRepository<Student> repository) {
+            studentRepository = repository;
+
+            // энтити фрейм форк🍉
+            // studentRepository = new EntityFrameworkRepository(new DataContext());
+
+            //даппер. разкомментировать по необходимости🍌
+            //studentRepository = new DapperRepository();
         }
         /// <summary>
         /// Добавить студента в список

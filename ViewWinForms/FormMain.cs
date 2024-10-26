@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,7 +19,8 @@ namespace ViewWinForms
         public FormMain()
         {
             InitializeComponent();
-            logic = new Logic();
+            IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+            logic = ninjectKernel.Get<Logic>();
         }
         private void init_grid()
         {

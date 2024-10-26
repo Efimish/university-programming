@@ -1,4 +1,5 @@
 ﻿using BusinessLogic;
+using Ninject;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -45,7 +46,8 @@ namespace ViewConsole
         }
         static void Main(string[] args)
         {
-            Logic logic = new Logic();
+            IKernel ninjectKernel = new StandardKernel(new SimpleConfigModule());
+            Logic logic = ninjectKernel.Get<Logic>();
             Console.OutputEncoding = Encoding.UTF8;
             while ( true )
             {
